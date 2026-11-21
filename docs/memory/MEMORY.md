@@ -1,0 +1,14 @@
+- [BoF3 widescreen status](bof3-widescreen-status.md) — 16:9 works; main-EXE SX cull sites found and added to game.toml, gaps fixed, user confirmed; world map/towns untested
+- [Alundra recomp status](alundra-recomp-status.md) — project at C:\RecompDev\alundra-recomp, CHD→cue trick, 16:9 + cloud widening + soft edge + load-room cloud strips (site 0x800262EC) done, green-block bug analysed, debug workflow, new hook sites need `generate`
+- [PSX 60Hz override](psx-force-60hz.md) — PSX_FORCE_60HZ env var, BoF3 tested OK; other projects not yet patched
+- [BoF4 + Legend of Dragoon status](bof4-lod-recomp-status.md) — both projects set up and release-built 2026-11-20; untested, no widescreen yet
+- [Alundra HUD Stein + Startzustand-Falle](alundra-hud-stein-startzustand.md) — 10-HP-Stein oben über den Punkten, /N weg; HUD-Pakete vor dem ersten Start-Menü an anderen Positionen, per Textur erkennen, frisch testen
+- [Alundra HUD /10-Glyph-Startfix](alundra-hud-glyph-start-fix.md) — Glyphen bei x=3 vor erstem Menü nicht als Item-Slots verschieben; bestätigt
+- [Alundra HUD im Menü ausblenden](alundra-hud-menue-ausblenden.md) — HUD-Hook versteckt HUD, solange Basis-Y != 0x10 (Menü-Slide); bestätigt
+- [Alundra Kantenquad kleine Räume](alundra-kantenquad-kleine-raeume.md) — Quad nur bei Kachel-Overlap, schwarzer Balken weg; bestätigt
+- [Alundra Kantenquad dunkle Kacheln](alundra-kantenquad-dunkle-kacheln.md) — Quad nur bei ≥2 verschiedenen hellen Kacheln; bestätigt
+- [CD-Speed Ladezeit](recomp-cd-speed-ladezeit.md) — Alundra cd-speed 16 (5 s → 2 s), Framework-Fixes
+- [Memcard-Scan Turbo](recomp-memcard-scan-turbo.md) — Spielstand laden: Vblanks ungebremst während Kartenlesen; bestätigt
+- [Alundra Ring-Maske gestreckt](alundra-ring-maske-stretch.md) — 0x67-Streifen -> 4/3-Quads, Hook 0x8005D5E0, bestätigt
+- [Alundra Kantenquad Füllspalte](alundra-kantenquad-fuellspalte.md) — Quad nur bei >=3 verschiedenen clut|u, rechter Rand Kamera 927, bestätigt
+- [Alundra Randfarbe-Fill + Stale-Spalte](alundra-randfarbe-fill-stale-spalte.md) — Außenbereich in Kartenfarbe (VRAM), Game-Over-Balken rechts, Kantenquad-Schwelle 4; bestätigt

@@ -1,0 +1,5 @@
+# Lokal: heruntergeladene Toolchain (ca. 800 MB) und Logs
+/Toolchain/
+/hudlog.txt
+*.log
+__pycache__/

@@ -1,0 +1,12 @@
+[submodule "alundra-recomp"]
+	path = alundra-recomp
+	url = https://github.com/Benexdrake/Alundra-Recomp.git
+[submodule "bof3-recomp"]
+	path = bof3-recomp
+	url = https://github.com/Benexdrake/BreathOfFire3-Recomp.git
+[submodule "bof4-recomp"]
+	path = bof4-recomp
+	url = https://github.com/Benexdrake/BreathOfFire4-Recomp.git
+[submodule "lod-recomp"]
+	path = lod-recomp
+	url = https://github.com/Benexdrake/LegendOfDragoon-Recomp.git
