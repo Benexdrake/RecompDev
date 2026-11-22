@@ -12,3 +12,7 @@
 - [Alundra Ring-Maske gestreckt](alundra-ring-maske-stretch.md) — 0x67-Streifen -> 4/3-Quads, Hook 0x8005D5E0, bestätigt
 - [Alundra Kantenquad Füllspalte](alundra-kantenquad-fuellspalte.md) — Quad nur bei >=3 verschiedenen clut|u, rechter Rand Kamera 927, bestätigt
 - [Alundra Randfarbe-Fill + Stale-Spalte](alundra-randfarbe-fill-stale-spalte.md) — Außenbereich in Kartenfarbe (VRAM), Game-Over-Balken rechts, Kantenquad-Schwelle 4; bestätigt
+- [Alundra Tor-Schatten](alundra-tor-schatten.md) — schwarzer Kreis unter dem Tor ausgeblendet, Hook 0x8002DDF4
+- [Alundra Rand-Füllung blinkte](alundra-rand-fuellung-blinken.md) — Sampling-Ursprung nicht aus Clip-Fenster nehmen, gefixt
+- [Alundra Rand-Fill Erststart](alundra-rand-fuellung-erststart.md) — schwarzer Balken nur nach Exe-Start, Sampling-Fix
+- [Alundra Rand-Füllung & Maske](alundra-rand-fuellung-maske-mine.md) — Verlauf, Median, Füllung hinter Maske

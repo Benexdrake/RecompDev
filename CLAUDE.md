@@ -100,6 +100,9 @@ Dunkelgrüne 24x16-Blöcke in Baumkronen. Ursache: Kachel-Tabelleneinträge (Pag
 ### Ring-/Lichtmaske gestreckt (fertig, bestätigt, 2026-11-21)
 Overlay aus 120 0x67-Streifen (4 px hoch) wird per Hook `alundra_mask_stretch` (Site 0x8005D5E0) durch um 4/3 gestreckte Quads ersetzt. Details: `docs/memory/alundra-ring-maske-stretch.md`.
 
+### Tor-Schatten (fertig, bestätigt, 2026-11-22)
+Unter dem Tor erschien ein schwarzer Schatten-Kreis am Säulenfuß (Spiellogik: zweite Schatten-Definition im Spieler-Slot). Hook `alundra_shadow_part` auf Site 0x8002DDF4 klappt das Quad zusammen. Details: `docs/memory/alundra-tor-schatten.md`. Release + Debug gebaut.
+
 ### Offene Idee
 `docs/alundra-dialogbox-plan.md`: Sprechboxen durch eigene Grafik und TTF-Text ersetzen (nur Plan, nichts implementiert).
 
