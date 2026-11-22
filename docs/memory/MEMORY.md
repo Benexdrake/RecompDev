@@ -28,3 +28,4 @@
 - [Alundra Neuaufbau Phase 3](alundra-neuaufbau-phase3.md) — Clear-Farbe per Hook 0x80086CC4, bestätigt
 - [Alundra Neuaufbau Phase 4](alundra-neuaufbau-phase4.md) — map_edge_fade mit Raumtabelle, Debug gebaut
 - [Neuaufbau Phase 5](alundra-neuaufbau-phase5.md) — Mine per Clear Schwarz, Debug grün, Spieltest offen
+- [Schatten-Randquad](alundra-mine-schatten-randquad.md) — Schattenschicht nur 4:3: raumunabhängige Randquads 50 %, Zellenzählung, bestätigt, nur Debug
