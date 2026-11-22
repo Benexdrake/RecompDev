@@ -23,3 +23,8 @@
 - [Alundra Kachelpuffer-Überlauf](alundra-kachelpuffer-ueberlauf.md) — VRAM-Rauschen durch Überlauf des 600-Pakete-Puffers; Hook 0x8002CFD8 + private Arena, Vorlage nachschreiben; Randfix danach weg (offen)
 - [Alundra Raum-Hintergrund](alundra-raum-hintergrund-clear.md) — kleine Räume: Spaltenlimit + Clear-FillRect schwarz statt Kantenquads
 - [Alundra Clear-Layer-Ansatz](alundra-clear-layer-ansatz.md) — Rand nicht füllen, Clear-FillRect pro Raum färben; Debug-Env PSX_DEBUG_FILL_ONLY/RGB (BBGGRR); nächster Schritt Widescreen in Einzeldateien aufteilen
+- [Alundra Neuaufbau Phase 1](alundra-neuaufbau-phase1-api.md) — Gerüst + Antworten zur Plugin-API (gleiche Hook-Adresse mehrerer IDs erlaubt)
+- [Alundra Neuaufbau Phase 2](alundra-neuaufbau-phase2.md) — reiner Widescreen-Mod umgesetzt, Debug-Build grün, Spieltest offen
+- [Alundra Neuaufbau Phase 3](alundra-neuaufbau-phase3.md) — Clear-Farbe per Hook 0x80086CC4, bestätigt
+- [Alundra Neuaufbau Phase 4](alundra-neuaufbau-phase4.md) — map_edge_fade mit Raumtabelle, Debug gebaut
+- [Neuaufbau Phase 5](alundra-neuaufbau-phase5.md) — Mine per Clear Schwarz, Debug grün, Spieltest offen
