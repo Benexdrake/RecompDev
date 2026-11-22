@@ -16,3 +16,4 @@
 - [Alundra Rand-Füllung blinkte](alundra-rand-fuellung-blinken.md) — Sampling-Ursprung nicht aus Clip-Fenster nehmen, gefixt
 - [Alundra Rand-Fill Erststart](alundra-rand-fuellung-erststart.md) — schwarzer Balken nur nach Exe-Start, Sampling-Fix
 - [Alundra Rand-Füllung & Maske](alundra-rand-fuellung-maske-mine.md) — Verlauf, Median, Füllung hinter Maske
+- [Alundra Mine Füllung unter Maske](alundra-rand-fuellung-mine-unter-maske.md) — bei Maske Füllung unter Maske in Clear-Farbe, Nebel wieder vorn, Farbe nicht perfekt (akzeptiert)
