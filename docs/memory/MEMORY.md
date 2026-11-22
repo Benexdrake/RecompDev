@@ -2,7 +2,7 @@
 - [Alundra recomp status](alundra-recomp-status.md) — project at C:\RecompDev\alundra-recomp, CHD→cue trick, 16:9 + cloud widening + soft edge + load-room cloud strips (site 0x800262EC) done, green-block bug analysed, debug workflow, new hook sites need `generate`
 - [PSX 60Hz override](psx-force-60hz.md) — PSX_FORCE_60HZ env var, BoF3 tested OK; other projects not yet patched
 - [BoF4 + Legend of Dragoon status](bof4-lod-recomp-status.md) — both projects set up and release-built 2026-11-20; untested, no widescreen yet
-- [Alundra HUD Stein + Startzustand-Falle](alundra-hud-stein-startzustand.md) — 10-HP-Stein oben über den Punkten, /N weg; HUD-Pakete vor dem ersten Start-Menü an anderen Positionen, per Textur erkennen, frisch testen
+- [Alundra HUD Stein + Startzustand-Falle](alundra-hud-stein-startzustand.md) — 10-HP-Stein oben über den Punkten, /N weg; HUD-Pakete vor dem ersten Start-Menü an anderen Positionen, per Textur erkennen, frisch testen; grauer Stein = u=144 statt 96 (Stein unten hängen geblieben, gefixt)
 - [Alundra HUD /10-Glyph-Startfix](alundra-hud-glyph-start-fix.md) — Glyphen bei x=3 vor erstem Menü nicht als Item-Slots verschieben; bestätigt
 - [Alundra HUD im Menü ausblenden](alundra-hud-menue-ausblenden.md) — HUD-Hook versteckt HUD, solange Basis-Y != 0x10 (Menü-Slide); bestätigt
 - [Alundra Kantenquad kleine Räume](alundra-kantenquad-kleine-raeume.md) — Quad nur bei Kachel-Overlap, schwarzer Balken weg; bestätigt
@@ -17,3 +17,4 @@
 - [Alundra Rand-Fill Erststart](alundra-rand-fuellung-erststart.md) — schwarzer Balken nur nach Exe-Start, Sampling-Fix
 - [Alundra Rand-Füllung & Maske](alundra-rand-fuellung-maske-mine.md) — Verlauf, Median, Füllung hinter Maske
 - [Alundra Mine Füllung unter Maske](alundra-rand-fuellung-mine-unter-maske.md) — bei Maske Füllung unter Maske in Clear-Farbe, Nebel wieder vorn, Farbe nicht perfekt (akzeptiert)
+- [Alundra Raumfarbe per switch](alundra-raumfarbe-switch.md) — Außenfarbe unter Maske pro Raum (FNV-Hash der Kartenzeilen), Mine-Problemraum Schwarz
