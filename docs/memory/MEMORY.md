@@ -18,5 +18,6 @@
 - [Alundra Rand-Fill Erststart](alundra-rand-fuellung-erststart.md) — schwarzer Balken nur nach Exe-Start, Sampling-Fix
 - [Alundra Rand-Füllung & Maske](alundra-rand-fuellung-maske-mine.md) — Verlauf, Median, Füllung hinter Maske
 - [Alundra Mine Füllung unter Maske](alundra-rand-fuellung-mine-unter-maske.md) — bei Maske Füllung unter Maske in Clear-Farbe, Nebel wieder vorn, Farbe nicht perfekt (akzeptiert)
-- [Alundra Raumfarbe per switch](alundra-raumfarbe-switch.md) — Außenfarbe unter Maske pro Raum (FNV-Hash der Kartenzeilen), Mine-Problemraum Schwarz
+- [Alundra Raumfarbe per switch](alundra-raumfarbe-switch.md) — Außenfarbe pro Raum (FNV-Hash der Kartenzeilen); Mine-Räume 1+3, Dunkelfüllung 40 %
 - [Alundra heller Rand schwarz](alundra-heller-rand-schwarz.md) — heller Kartenrand (Bäume): Außen schwarz + Verlaufsquad wie Dorf, Schwelle 0x50, bestätigt 2026-11-22
+- [Alundra Kachelpuffer-Überlauf](alundra-kachelpuffer-ueberlauf.md) — VRAM-Rauschen durch Überlauf des 600-Pakete-Puffers; Hook 0x8002CFD8 + private Arena, Vorlage nachschreiben; Randfix danach weg (offen)

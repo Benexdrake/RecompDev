@@ -104,9 +104,13 @@ Overlay aus 120 0x67-Streifen (4 px hoch) wird per Hook `alundra_mask_stretch` (
 
 ### Mine / dunkle Räume (fertig, bestätigt, 2026-11-22)
 Die Dunkelheit ist die Wolken-/Schattenschicht (0x7F-Sprites, nur 4:3 breit). Links/rechts erscheinen 90-%-Schwarz-Füllquads (subtraktiv, Slot 959), erkannt über Randspalten-Zählung in `alundra_cloud_loop`. Details: `docs/memory/alundra-mine-dunkel-fuellung.md`. Debug-Build gebaut, Release noch nicht neu gebaut.
+Später (2026-11-22): `ALU_DARK_FILL_COLOR` jetzt 0x66 (~40 %). Mine-Raum 3 (Hash `0x56AA69AF`, Spalten 8..22, Füllung (8,8,0)) per Raumfarben-Switch, Details `docs/memory/alundra-raumfarbe-switch.md`. Nur Debug gebaut.
 
 ### Tor-Schatten (fertig, bestätigt, 2026-11-22)
 Unter dem Tor erschien ein schwarzer Schatten-Kreis am Säulenfuß (Spiellogik: zweite Schatten-Definition im Spieler-Slot). Hook `alundra_shadow_part` auf Site 0x8002DDF4 klappt das Quad zusammen. Details: `docs/memory/alundra-tor-schatten.md`. Release + Debug gebaut.
+
+### Kachelpuffer-Überlauf (fertig, bestätigt, 2026-11-22)
+Im 16:9 liefen die 600 Kachelpakete des Spiels (0x800DD878 + 13600*Parität) bei zwei Ebenen über, zerstörte E1-Pool und Variablen, der GPU-Walker führte sie aus -> VRAM-Rauschen. Hook 0x8002CFD8 `alundra_tilebuf` legt beide Puffer in eine private Arena, Paketvorlage wird im Hook nachgeschrieben. Details: `docs/memory/alundra-kachelpuffer-ueberlauf.md`. Alte Save States laden nicht mehr. Nur Debug gebaut.
 
 ### Offene Idee
 `docs/alundra-dialogbox-plan.md`: Sprechboxen durch eigene Grafik und TTF-Text ersetzen (nur Plan, nichts implementiert).

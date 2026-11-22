@@ -1,6 +1,6 @@
 ---
 name: alundra-mine-dunkel-fuellung
-description: Alundra Mine/dunkle Räume: Dunkelschicht nur 4:3 breit, 90%-Schwarz-Füllquads links/rechts, bestätigt 2026-11-22
+description: Alundra Mine/dunkle Räume: Dunkelschicht nur 4:3 breit, Schwarz-Füllquads links/rechts (jetzt 40 %, siehe alundra-raumfarbe-switch), bestätigt 2026-11-22
 metadata:
   type: project
 ---
@@ -11,3 +11,5 @@ Fix in `mods/alundra_widescreen.c`: `alundra_cloud_loop` zählt pro Frame emitti
 
 **Why:** Erkennung über Vorframe-Zählung (1 Frame Verzögerung beim Raumwechsel möglich). Schwellwert 12 und Spalten 0/304 sind aus der Mine abgeleitet.
 **How to apply:** Falls die Füllung in normalen Räumen (Wolken) auftaucht oder in anderen dunklen Räumen fehlt, die Schwellen/Spaltenpositionen prüfen (`gpu_frame_dump`: 0x7F-Sprites in OT 0, x-Verteilung). Ähnlich: [[alundra-ring-maske-stretch]]. Debug-Hinweis: Das Debug-Exe hängt manchmal nach längerer Laufzeit/Zweitinstanz; nur eine Instanz starten, sonst blockiert der Port.
+
+**Update 2026-11-22:** `ALU_DARK_FILL_COLOR` inzwischen 0x66 (~40 %), 90 % war zu hart. Details [[alundra-raumfarbe-switch]].
