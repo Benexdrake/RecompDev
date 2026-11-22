@@ -19,3 +19,4 @@
 - [Alundra Rand-Füllung & Maske](alundra-rand-fuellung-maske-mine.md) — Verlauf, Median, Füllung hinter Maske
 - [Alundra Mine Füllung unter Maske](alundra-rand-fuellung-mine-unter-maske.md) — bei Maske Füllung unter Maske in Clear-Farbe, Nebel wieder vorn, Farbe nicht perfekt (akzeptiert)
 - [Alundra Raumfarbe per switch](alundra-raumfarbe-switch.md) — Außenfarbe unter Maske pro Raum (FNV-Hash der Kartenzeilen), Mine-Problemraum Schwarz
+- [Alundra heller Rand schwarz](alundra-heller-rand-schwarz.md) — heller Kartenrand (Bäume): Außen schwarz + Verlaufsquad wie Dorf, Schwelle 0x50, bestätigt 2026-11-22

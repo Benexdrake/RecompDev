@@ -17,6 +17,8 @@ Weitere Doku in `docs/`: `ALUNDRA_WIDESCREEN_HANDOFF.md`, `BREATH_OF_FIRE_3_WIDE
 
 ## Gemeinsamer Workflow
 
+**Testen (Nutzerwunsch, 2026-11-22):** Vorerst nur das Debug-Build bauen und testen (`build-debugtools`, mit `-DPSX_DEBUG_TOOLS=ON`). Der Nutzer spielt damit auch zwischendurch, um Bugs zu finden. Das Release-Build nur auf Nachfrage neu bauen.
+
 **Build** (Git Bash). Toolchain auf den PATH, dann:
 ```
 export PATH="$HOME/.local/share/retcomm/toolchains/cmake-clang-v1/1.0.14/bin:$PATH"
