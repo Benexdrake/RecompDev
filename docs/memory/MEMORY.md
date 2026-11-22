@@ -21,3 +21,5 @@
 - [Alundra Raumfarbe per switch](alundra-raumfarbe-switch.md) — Außenfarbe pro Raum (FNV-Hash der Kartenzeilen); Mine-Räume 1+3, Dunkelfüllung 40 %
 - [Alundra heller Rand schwarz](alundra-heller-rand-schwarz.md) — heller Kartenrand (Bäume): Außen schwarz + Verlaufsquad wie Dorf, Schwelle 0x50, bestätigt 2026-11-22
 - [Alundra Kachelpuffer-Überlauf](alundra-kachelpuffer-ueberlauf.md) — VRAM-Rauschen durch Überlauf des 600-Pakete-Puffers; Hook 0x8002CFD8 + private Arena, Vorlage nachschreiben; Randfix danach weg (offen)
+- [Alundra Raum-Hintergrund](alundra-raum-hintergrund-clear.md) — kleine Räume: Spaltenlimit + Clear-FillRect schwarz statt Kantenquads
+- [Alundra Clear-Layer-Ansatz](alundra-clear-layer-ansatz.md) — Rand nicht füllen, Clear-FillRect pro Raum färben; Debug-Env PSX_DEBUG_FILL_ONLY/RGB (BBGGRR); nächster Schritt Widescreen in Einzeldateien aufteilen

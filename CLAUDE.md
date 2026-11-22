@@ -112,6 +112,9 @@ Unter dem Tor erschien ein schwarzer Schatten-Kreis am Säulenfuß (Spiellogik: 
 ### Kachelpuffer-Überlauf (fertig, bestätigt, 2026-11-22)
 Im 16:9 liefen die 600 Kachelpakete des Spiels (0x800DD878 + 13600*Parität) bei zwei Ebenen über, zerstörte E1-Pool und Variablen, der GPU-Walker führte sie aus -> VRAM-Rauschen. Hook 0x8002CFD8 `alundra_tilebuf` legt beide Puffer in eine private Arena, Paketvorlage wird im Hook nachgeschrieben. Details: `docs/memory/alundra-kachelpuffer-ueberlauf.md`. Alte Save States laden nicht mehr. Nur Debug gebaut.
 
+### Skelett-Raum ohne Randquads (fertig, bestätigt, 2026-11-22)
+Räume `0x793D39CF` und `0x1B8E3013`: Kantenquads/Füllung flackerten bzw. sahen wie Blöcke aus, jetzt zeichnet der Mod dort am Rand nichts (`room_fill`), Hintergrund = Spiel-Clear (0,8,0). Spaltenlimit war falsch (Karte geht weiter). Details: `docs/memory/alundra-raum-hintergrund-clear.md`. Nur Debug gebaut.
+
 ### Offene Idee
 `docs/alundra-dialogbox-plan.md`: Sprechboxen durch eigene Grafik und TTF-Text ersetzen (nur Plan, nichts implementiert).
 
