@@ -10,6 +10,7 @@
 - [CD-Speed Ladezeit](recomp-cd-speed-ladezeit.md) — Alundra cd-speed 16 (5 s → 2 s), Framework-Fixes
 - [Memcard-Scan Turbo](recomp-memcard-scan-turbo.md) — Spielstand laden: Vblanks ungebremst während Kartenlesen; bestätigt
 - [Alundra Ring-Maske gestreckt](alundra-ring-maske-stretch.md) — 0x67-Streifen -> 4/3-Quads, Hook 0x8005D5E0, bestätigt
+- [Alundra Mine dunkel: 90%-Füllung](alundra-mine-dunkel-fuellung.md) — Wolken-Dunkelschicht nur 4:3, Füllquads links/rechts, bestätigt
 - [Alundra Kantenquad Füllspalte](alundra-kantenquad-fuellspalte.md) — Quad nur bei >=3 verschiedenen clut|u, rechter Rand Kamera 927, bestätigt
 - [Alundra Randfarbe-Fill + Stale-Spalte](alundra-randfarbe-fill-stale-spalte.md) — Außenbereich in Kartenfarbe (VRAM), Game-Over-Balken rechts, Kantenquad-Schwelle 4; bestätigt
 - [Alundra Tor-Schatten](alundra-tor-schatten.md) — schwarzer Kreis unter dem Tor ausgeblendet, Hook 0x8002DDF4
