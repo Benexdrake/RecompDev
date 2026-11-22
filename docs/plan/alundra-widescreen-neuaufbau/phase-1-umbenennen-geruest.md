@@ -1,5 +1,7 @@
 # Phase 1: Umbenennen und Gerüst
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Ziel: Alt-Mod aus dem Build nehmen, neue Mod-Dateien mit funktionierender Registrierung bereitstellen.
 
 ## Aufgaben

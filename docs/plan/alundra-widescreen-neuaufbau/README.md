@@ -1,5 +1,7 @@
 # Plan: Alundra-Widescreen neu aufbauen (Widescreen / Hintergrundfarbe / Kartenrand)
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Stand: 2026-11-22. Projekt: `alundra-recomp`. Betroffen: `mods/alundra_widescreen.c` (842 Zeilen), Manifest, `CMakeLists.txt`, `game.toml`.
 
 ## Ziel

@@ -1,5 +1,7 @@
 # Phase 5: Dunkle Räume (Mine)
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Ziel: Prüfen, ob die Sonderlogik für dunkle Räume durch die Clear-Farbe ersetzt werden kann, und den Rest sauber platzieren.
 
 ## Ausgangslage

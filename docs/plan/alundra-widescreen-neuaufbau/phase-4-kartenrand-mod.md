@@ -1,5 +1,7 @@
 # Phase 4: Mod Kartenrand-Verlauf (`map_edge_fade`)
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Ziel: Der weiche Übergang ins Schwarze am Kartenrand (heute im Dorf) wird ein eigener, einzeln schaltbarer Mod. Nur dort, wo er explizit angelegt ist.
 
 ## Ausgangslage (bestätigt im Alt-Mod)

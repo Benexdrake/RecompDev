@@ -1,5 +1,7 @@
 # Phase 6: Gesamttest und Abschluss
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 ## Aufgaben
 
 1. **Gesamttest** der Testmatrix aus Phase 0 mit allen drei Features an. Dann jedes Feature einzeln aus (`build-debugtools/mods/state.toml`, mit `package_id`) und prüfen, dass das Spiel ohne es sauber läuft. Besonders `widescreen` aus (4:3): Rand und Farbe tun nichts Falsches.

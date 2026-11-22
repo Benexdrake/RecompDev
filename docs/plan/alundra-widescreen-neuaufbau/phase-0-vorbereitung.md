@@ -1,5 +1,7 @@
 # Phase 0: Vorbereitung
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Ziel: Ausgangslage sichern und messbar machen, damit jede spätere Phase gegen Referenzen geprüft werden kann.
 
 ## Aufgaben

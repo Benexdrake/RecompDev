@@ -1,5 +1,7 @@
 # Phase 0: Ergebnis
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Stand: 2026-11-22. Branch `widescreen-neuaufbau` (Hauptrepo und Submodul `alundra-recomp`).
 
 ## Erledigt
@@ -27,7 +29,7 @@ Stand: 2026-11-22. Branch `widescreen-neuaufbau` (Hauptrepo und Submodul `alundr
 | Tor | offen | offen | offen | offen | kein Schatten-Kreis |
 | Start ohne Start-Menü / Start-Menü | – | – | offen | – | HUD unverändert |
 
-## Offen (braucht den Nutzer am Spiel)
+## Offen (zurückgestellt, siehe [offen.md](offen.md))
 
 Die Punkte 4–6 der Phase (Referenzscreenshots, Clear-Farben per `PSX_DEBUG_FILL_ONLY=1`, fehlende Hashes) setzen voraus, dass der Spielstand pro Raum von Hand geladen wird. Ablauf pro Raum:
 

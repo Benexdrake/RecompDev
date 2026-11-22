@@ -1,5 +1,7 @@
 # Phase 2: Reiner Widescreen-Mod
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Ziel: Alles, was **nur** der Breite dient, aus dem Alt-Mod in den neuen Widescreen-Mod übernehmen. Keine Randfüllung, keine Raumfarben.
 
 ## Übernehmen (Quelle: `alundra_widescreen_legacy.c.txt`)

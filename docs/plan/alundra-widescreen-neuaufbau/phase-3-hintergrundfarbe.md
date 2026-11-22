@@ -1,5 +1,7 @@
 # Phase 3: Mod Hintergrundfarbe (`background_color`)
 
+> **Hinweis:** Zurückgestellte Punkte (Messungen am Spiel, Referenzbilder, Clear-Farben) stehen in [offen.md](offen.md).
+
 Ziel: Das Clear-FillRect (Befehl 0x02, 320x240, erstes Paket jedes Frames) wird pro Raum in der gewünschten Farbe gefüllt. Default Schwarz.
 
 ## 3a Technik klären (zuerst)
