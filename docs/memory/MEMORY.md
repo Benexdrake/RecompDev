@@ -29,3 +29,4 @@
 - [Alundra Neuaufbau Phase 4](alundra-neuaufbau-phase4.md) — map_edge_fade mit Raumtabelle, Debug gebaut
 - [Neuaufbau Phase 5](alundra-neuaufbau-phase5.md) — Mine per Clear Schwarz, Debug grün, Spieltest offen
 - [Schatten-Randquad](alundra-mine-schatten-randquad.md) — Schattenschicht nur 4:3: raumunabhängige Randquads 50 %, Zellenzählung, bestätigt, nur Debug
+- [Alundra Pillarbox](alundra-pillarbox-raumliste.md) — schwarze 4:3-Balken per Raumliste, Slot 959, Cutscene-Flag ungeeignet, nur Debug

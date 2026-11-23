@@ -27,3 +27,12 @@ Siehe [[alundra-rand-fuellung-mine-unter-maske]], [[alundra-rand-fuellung-maske-
 - Reihenfolge: Die 90-%-Dunkelfüllung (`alundra_dark_fill`, aus `alundra_after_tiles` herausgelöst) wird für Raum 3 VOR den Außenfüllquads gebaut (= liegt darüber). Sonst verdeckte die deckende (8,8,0)-Füllung sie. Andere Räume: alte Reihenfolge am Ende.
 - `ALU_DARK_FILL_COLOR` (global, alle Mine-Räume): 0xE6 (90 %) war zu hart -> 0xCC (80 %) -> 0x99 (60 %) -> aktuell **0x66 (40 %)**, vom Nutzer so übernommen. Nur Debug gebaut.
 - Methode: Pixelwerte per PIL aus `screenshot_wide_hires` (Übergänge pro Zeile), `gpu_frame_dump` auf OT 959 (Quads/Farbe), Kachelkante = 24k - cam. Frame-Dumps wechseln zwischen leer und voll.
+
+**Neuer Raumfarben-Eintrag (2026-11-23, Neuaufbau, `mods/alundra_bgcolor.c`):** Hash `0x4FB456CC` (Haus mit Teppichen/Rüstungen, Kamera X=0, Y=113). Screenshot-Messung: Rand außerhalb 4:3 (0,0,0), Leere im Raum (8,0,0) -> Clear `0x00000008` (BBGGRR). Debug gebaut, Sichtprüfung durch Nutzer offen.
+- Zweiter Raum mit gleicher Farbe: Hash `0x9A06E323` (Kamera X=927), ebenfalls `0x00000008`.
+- Dritter Raum, gleiche Farbe: Hash `0x11F00FF2` (Kamera X=0, Y=592), `0x00000008`.
+- Vierter Raum, gleiche Farbe: Hash `0xA6A16DE9` (Kamera X=0, Y=90), `0x00000008`.
+- Fünfter Raum, gleiche Farbe: Hash `0x40F3F4AC` (Kamera X=0, Y=154), `0x00000008`.
+- Sechster Raum, gleiche Farbe: Hash `0x9CB94CD1` (Kamera X=0, Y=544), `0x00000008`. Eingetragen, noch nicht gebaut.
+- **Default geändert (2026-11-23):** `alundra_room_color` default = `0x00000008` (8,0,0) statt Schwarz, nach 6 Räumen mit gleichem Befund (Hashes 0x4FB456CC, 0x9A06E323, 0x11F00FF2, 0xA6A16DE9, 0x40F3F4AC, 0x9CB94CD1; Einzeleinträge entfernt). Skelett- und Mine-Räume bleiben explizit.
+- **Kantenverlauf (alundra_edgefade.c, 2026-11-23):** Der subtraktive Randverlauf endete in Schwarz, Hintergrund ist jetzt (8,0,0). Pro Seite zusätzlich additiver Quad (E1 0xE1000020, Farbe 0x000008 am Rand -> 0), Arena 384 B (0/64 sub, 256/320 add). Sichtprüfung offen.
