@@ -36,3 +36,9 @@ Siehe [[alundra-rand-fuellung-mine-unter-maske]], [[alundra-rand-fuellung-maske-
 - Sechster Raum, gleiche Farbe: Hash `0x9CB94CD1` (Kamera X=0, Y=544), `0x00000008`. Eingetragen, noch nicht gebaut.
 - **Default geändert (2026-11-23):** `alundra_room_color` default = `0x00000008` (8,0,0) statt Schwarz, nach 6 Räumen mit gleichem Befund (Hashes 0x4FB456CC, 0x9A06E323, 0x11F00FF2, 0xA6A16DE9, 0x40F3F4AC, 0x9CB94CD1; Einzeleinträge entfernt). Skelett- und Mine-Räume bleiben explizit.
 - **Kantenverlauf (alundra_edgefade.c, 2026-11-23):** Der subtraktive Randverlauf endete in Schwarz, Hintergrund ist jetzt (8,0,0). Pro Seite zusätzlich additiver Quad (E1 0xE1000020, Farbe 0x000008 am Rand -> 0), Arena 384 B (0/64 sub, 256/320 add). Sichtprüfung offen.
+
+**Raum mit Treppe (2026-11-23):** Hash `0x8A1528CF` (Wort-FNV wie `alundra_room_sig`; Byte-FNV `0xB3A82EE5` war falsch) (Kamera X=0x17, Y=0xA8), dunkler Raum mit Wolkenschicht. Nutzer-Farbe (R,G,B)=(0,8,0) -> in der Skelett-Gruppe (`0x00000800`) von `alundra_room_color` eingetragen. Debug gebaut, Sichtprüfung offen.
+- Gruft zweite Map: Hash `0xA5781E10` (Kamera X=0, Y=0xDB), ebenfalls (0,8,0). Debug gebaut.
+- Gruft dritte Map: Hash `0x5944BC3C` (Kamera X=0, Y=0x60), ebenfalls (0,8,0). Eingetragen, noch nicht gebaut.
+
+**Raum per Screenshot (2026-11-23):** Hash `0x7C900F86` (Rand-Hash `0xD30699D0`), Screenshot-Farbe (R,G,B)=(8,8,0) -> `0x00000808` in `alundra_room_color` (zusammen mit `0xB2956EA2`). Hash per Debug-`read` des Kartenpuffers (Pointer 0x800DD86C) berechnet. Debug gebaut, Sichtprüfung offen.
