@@ -5,7 +5,7 @@ metadata:
   type: project
 ---
 
-**Stand 2026-11-24:** Release `v0.2.0` ist gebaut, vom Nutzer getestet ("funktioniert") und als **Draft** auf GitHub (`Benexdrake/Alundra-Recomp`), Tag gepusht. Nur Windows-ZIP, unsigniert, kein Linux-AppImage. Das Release ist die **USA-Fassung (SLUS-00553)**, die DE-Version ist nicht enthalten (Kopien `*.de_main`).
+**Stand 2026-11-24:** Release `v0.2.0` ist gebaut, vom Nutzer getestet ("funktioniert") und als **Draft** auf GitHub (`Benexdrake/Alundra-Recomp`), Tag gepusht. Windows-ZIP (getestet) und Linux-AppImage (gebaut ueber WSL, nur Start bis Launcher getestet, ohne PGO), unsigniert. Das Release ist die **USA-Fassung (SLUS-00553)**, die DE-Version ist nicht enthalten (Kopien `*.de_main`).
 
 **Befehl** (Git Bash, im Projektordner `alundra-recomp`, ca. 10 Min, baut in `build-package/`, Ergebnis `dist/`):
 ```
@@ -27,3 +27,9 @@ Danach: `git push`, `git tag -a vX`, `gh release create vX dist/*.zip dist/*.sha
 
 **Why:** Der Release-Weg ist vom Framework vorgegeben (wie MegaManX4Recomp); die Fehler lagen an der lokalen Toolchain und an halb umgestellten US-Daten.
 **How to apply:** Fuer jedes weitere Release `VERSION` und `RELEASE_NOTES.md` anpassen, committen, obigen Befehl ausfuehren, ZIP frisch entpackt mit US-Disc testen, dann Draft.
+
+**Linux-AppImage ueber WSL (`--platform linux`)** - Stolpersteine:
+- WSL-Pakete noetig: `build-essential cmake ninja-build imagemagick curl file python3 pkg-config libsdl3-dev libgl-dev libegl-dev` (Installation als Root mit `wsl -u root`, kein sudo-Passwort noetig; ohne Nutzer-Freigabe blockiert die Auto-Mode-Pruefung das).
+- libwebp-Entpacken scheitert auf `/mnt/c` (Umbenennen: Permission denied). Fix: Archiv in WSL nach `~/libwebp-src` entpacken (`tar --strip-components=1`) und `PSX_LIBWEBP_SOURCE_DIR=/home/<user>/libwebp-src` mit `WSLENV=PSX_LIBWEBP_SOURCE_DIR` und `MSYS2_ENV_CONV_EXCL=PSX_LIBWEBP_SOURCE_DIR` setzen (Git Bash wandelt sonst den Pfad um). `vendor_deps.sh` hilft nicht.
+- PGO-Boot-Training in WSL scheitert (`no_disc`): die Projekt-`game.toml` hat den Windows-Disc-Pfad. Fuer den Linux-Build `selective_pgo = false` in `packaging/release.toml` setzen, committen, bauen, danach zurueck.
+- `package_appimage.sh`/`AppRun`/`.desktop` muessen LF haben (`sed -i "s/$//"`, danach `git add -u`, sonst "set: pipefail: invalid option name"). `build-package/linux` vorher loeschen, wenn PGO-Reste drin sind.
