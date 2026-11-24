@@ -118,6 +118,9 @@ Räume `0x793D39CF` und `0x1B8E3013`: Kantenquads/Füllung flackerten bzw. sahen
 ### Schwarze 4:3-Balken (2026-11-23)
 Feature `pillarbox` (`mods/alundra_pillarbox.c`): Raumliste, in gelisteten Szenen schwarze Seitenbalken in OT-Slot 959. Kein Cutscene-Flag gefunden. Details: `docs/memory/alundra-pillarbox-raumliste.md`. Nur Debug gebaut.
 
+### Release 0.2.0 (2026-11-24)
+USA-Fassung (SLUS-00553) als Windows-ZIP, Draft auf GitHub, Nutzer-getestet. Befehl, Stolpersteine und Identitaetsdateien: `docs/memory/alundra-release-0-2-0.md`. Der Arbeitsstand in `alundra-recomp` ist inzwischen US, nicht DE (`*.de_main` sind die DE-Kopien).
+
 ### Offene Idee
 `docs/alundra-dialogbox-plan.md`: Sprechboxen durch eigene Grafik und TTF-Text ersetzen (nur Plan, nichts implementiert).
 

@@ -33,3 +33,4 @@
 - [Alundra USA-Port](alundra-usa-port.md) — Branch usa-slus-00553, Disc-Patch (SYSTEM.CNF/Dateiname), bootet, Mods großteils portiert, in main gemergt
 - [Alundra HUD HP-Pickup veraltet](alundra-hud-hp-pickup-stale.md) — Stein/Herzen nach 10->11 HP absolut platziert, 2026-11-24
 - [Mine Dunkelstärke gemessen](alundra-mine-dunkel-staerke-gemessen.md) — Original subtrahiert grau ~31 % (0x4E), nicht 0x66
+- [Alundra Release 0.2.0](alundra-release-0-2-0.md) — USA-Windows-ZIP, Packager-Befehl, Stolpersteine, Identitaetsdateien, Draft auf GitHub
