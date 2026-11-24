@@ -30,3 +30,6 @@
 - [Neuaufbau Phase 5](alundra-neuaufbau-phase5.md) — Mine per Clear Schwarz, Debug grün, Spieltest offen
 - [Schatten-Randquad](alundra-mine-schatten-randquad.md) — Schattenschicht nur 4:3: raumunabhängige Randquads 50 %, Zellenzählung, bestätigt, nur Debug
 - [Alundra Pillarbox](alundra-pillarbox-raumliste.md) — schwarze 4:3-Balken per Raumliste, Slot 959, Cutscene-Flag ungeeignet, nur Debug
+- [Alundra USA-Port](alundra-usa-port.md) — Branch usa-slus-00553, Disc-Patch (SYSTEM.CNF/Dateiname), bootet, Mods großteils portiert, in main gemergt
+- [Alundra HUD HP-Pickup veraltet](alundra-hud-hp-pickup-stale.md) — Stein/Herzen nach 10->11 HP absolut platziert, 2026-11-24
+- [Mine Dunkelstärke gemessen](alundra-mine-dunkel-staerke-gemessen.md) — Original subtrahiert grau ~31 % (0x4E), nicht 0x66
