@@ -34,3 +34,5 @@
 - [Alundra HUD HP-Pickup veraltet](alundra-hud-hp-pickup-stale.md) — Stein/Herzen nach 10->11 HP absolut platziert, 2026-11-24
 - [Mine Dunkelstärke gemessen](alundra-mine-dunkel-staerke-gemessen.md) — Original subtrahiert grau ~31 % (0x4E), nicht 0x66
 - [Alundra Release 0.2.0](alundra-release-0-2-0.md) — USA-Windows-ZIP, Packager-Befehl, Stolpersteine, Identitaetsdateien, Draft auf GitHub
+- [Alundra Now-Loading-Seitenränder](alundra-now-loading-seitenluecken.md) — gelöst 2026-11-25: Host-Ränder im Standbild per VBlank-Idle-Clear (gpu.c) schwarz, nicht per Mod-Hook
+- [Alundra Gilder-Cheat](alundra-cheat-gilder.md) — Gilder-Adresse, Feature cheat_infinite_money
