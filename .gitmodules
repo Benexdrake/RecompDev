@@ -13,6 +13,8 @@
 [submodule "illusionoftime-recomp"]
 	path = illusionoftime-recomp
 	url = https://github.com/Benexdrake/IllusionOfTime-Recomp.git
+	ignore = dirty
 [submodule "terranigma-recomp"]
 	path = terranigma-recomp
 	url = https://github.com/Benexdrake/Terranigma-Recomp.git
+	ignore = dirty
