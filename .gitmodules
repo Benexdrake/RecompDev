@@ -10,3 +10,6 @@
 [submodule "lod-recomp"]
 	path = lod-recomp
 	url = https://github.com/Benexdrake/LegendOfDragoon-Recomp.git
+[submodule "illusionoftime-recomp"]
+	path = illusionoftime-recomp
+	url = https://github.com/Benexdrake/IllusionOfTime-Recomp.git

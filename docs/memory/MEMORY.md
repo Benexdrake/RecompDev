@@ -36,3 +36,5 @@
 - [Alundra Release 0.2.0](alundra-release-0-2-0.md) — USA-Windows-ZIP, Packager-Befehl, Stolpersteine, Identitaetsdateien, Draft auf GitHub
 - [Alundra Now-Loading-Seitenränder](alundra-now-loading-seitenluecken.md) — gelöst 2026-11-25: Host-Ränder im Standbild per VBlank-Idle-Clear (gpu.c) schwarz, nicht per Mod-Hook
 - [Alundra Gilder-Cheat](alundra-cheat-gilder.md) — Gilder-Adresse, Feature cheat_infinite_money
+- [Terranigma Widescreen](terranigma-widescreen-status.md) — Welt/Räume/Objekte 16:9 bestätigt (2026-11-26): Weltkarte aus WRAM per Provider, Cull-Hooks, BG3-Streifen offen
+- [Illusion of Time Widescreen](illusionoftime-widescreen-status.md) — 16:9 Grundgeruest laeuft (clamp), Welt/Culling offen

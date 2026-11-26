@@ -1,21 +1,23 @@
-# RecompDev – PSX-Recomp-Projekte
+# RecompDev – Static-Recompilation-Projekte (PSX, SNES, ...)
 
-Der Nutzer schreibt Deutsch: Antworten auf Deutsch. Stand: 2026-11-21.
+Der Nutzer schreibt Deutsch: Antworten auf Deutsch. Stand: 2026-11-26.
 
-Projekte (alle mit gemeinsamem `psxrecomp/`-Framework im jeweiligen Projektordner):
+Jedes Projekt hat sein eigenes Framework als Submodul im Projektordner: PSX nutzt `psxrecomp/`, SNES nutzt `snesrecomp/` (+ `recomp-ui/`). Weitere Plattformen kommen später: dann hier eine Zeile in der Tabelle und einen eigenen Abschnitt ergänzen. "Gemeinsamer Workflow (PSX)" und die PSX-Spielabschnitte gelten nur für PSX-Projekte, der Terranigma-Abschnitt nur für SNES.
 
-| Projekt | Ordner | Serial | Stand |
-|---|---|---|---|
-| Alundra (DE) | `alundra-recomp` | SLES-01256 | 16:9, HUD-Ecken, Wolken, weicher Kartenrand fertig |
-| Breath of Fire III | `bof3-recomp` | SLES-01304 | 16:9 fertig, bestätigt |
-| Breath of Fire IV (EU) | `bof4-recomp` | SLES-03552 | gebaut, ungetestet, kein Widescreen |
-| Legend of Dragoon (DE, 4 CDs) | `lod-recomp` | SCES-03045 | 16:9 im Kampf fertig |
+| Projekt | Ordner | Plattform | Serial / ROM | Stand |
+|---|---|---|---|---|
+| Alundra (DE) | `alundra-recomp` | PSX | SLES-01256 | 16:9, HUD-Ecken, Wolken, weicher Kartenrand fertig |
+| Breath of Fire III | `bof3-recomp` | PSX | SLES-01304 | 16:9 fertig, bestätigt |
+| Breath of Fire IV (EU) | `bof4-recomp` | PSX | SLES-03552 | gebaut, ungetestet, kein Widescreen |
+| Legend of Dragoon (DE, 4 CDs) | `lod-recomp` | PSX | SCES-03045 | 16:9 im Kampf fertig |
+| Terranigma (DE, Rev 1) | `terranigma-recomp` | SNES | `Terranigma (Germany) (Rev 1).sfc`, HiROM, kein Coprozessor | gebaut, siehe SNES-Abschnitt |
+| Illusion of Time (DE, Rev 1) | `illusionoftime-recomp` | SNES | `Illusion of Time (Germany) (Rev 1).sfc`, HiROM, kein Coprozessor, CRC32 4bd8e60b | gebaut (Debug), Boot ungetestet |
 
 Projekt-Memory (Status, Erkenntnisse): `docs/memory/` (Index `MEMORY.md`), neue Erkenntnisse dort ablegen.
 
 Weitere Doku in `docs/`: `ALUNDRA_WIDESCREEN_HANDOFF.md`, `BREATH_OF_FIRE_3_WIDESCREEN_HANDOFF.md`, `PAL_ZU_60HZ.md`, `PSX_SPIEL_PORTIEREN.md`, `alundra-dialogbox-plan.md`.
 
-## Gemeinsamer Workflow
+## Gemeinsamer Workflow (PSX)
 
 **Testen (Nutzerwunsch, 2026-11-22):** Vorerst nur das Debug-Build bauen und testen (`build-debugtools`, mit `-DPSX_DEBUG_TOOLS=ON`). Der Nutzer spielt damit auch zwischendurch, um Bugs zu finden. Das Release-Build nur auf Nachfrage neu bauen.
 
@@ -47,6 +49,34 @@ python psxrecomp/psxrecomp_cli.py rebuild --config game.toml --project-root . --
 - 3D-Spiele: `[widescreen] gte_game_mode = true` plus Cull-Sites. 2D-Spiele: `full_2d = true`, NICHT `gte_game_mode`.
 - Cull-Sites für Bildschirm-X im Hauptprogramm suchen, nicht nur in Overlay-Captures.
 - Für 2D-PSX-Spiele: Kachel- oder Cull-Schleife per `wtrace` auf ein Kachelpaket finden. Schleifen auf die Kartenbreite begrenzen statt Randspalten zu klonen. Wenn ein Grafikfehler nur in 16:9 auftritt, Pakete von 4:3 und 16:9 bei gleicher Kamera vergleichen und RAM-Tabellen prüfen, bevor man die Hooks verdächtigt.
+
+---
+
+## Terranigma / SNES (`terranigma-recomp`)
+
+Framework: `snesrecomp/` (RetroPortingToolkit, Submodul), Launcher `recomp-ui/`. Doku im Framework: `snesrecomp/docs/GETTING_STARTED.md`, `GAME_PROJECT_SETUP.md`, `DEBUG_ROUTES.md`, `LUA_TCP.md`. ROM: `C:\Users\BeneX Drake\Desktop\Development\Terranigma (Germany) (Rev 1).sfc` (nicht im Repo, `rom.cfg` zeigt per absolutem Pfad darauf). Spiel-Glue: `src/game_rtl.c`. Analyse-Eingaben: `recomp/symbols.toml`, `recomp/bank*.cfg`. `src/gen/` ist generiert, nie von Hand editieren.
+
+**Toolchain (anders als PSX):** VS 18 mit C++-Workload, Rust (`cargo`), CMake, Git Bash. In neuen Terminals den PATH neu laden (winget ändert nur den Windows-PATH).
+
+**Build** (PowerShell, im Projektordner):
+```
+& 'C:\Program Files\Git\bin\bash.exe' tools/regen.sh    # nur nach Änderung an recomp/*
+cmake -S . -B build -G "Visual Studio 18 2026" -A x64
+cmake --build build --config Release --parallel          # oder Debug / RelWithDebInfo
+```
+- Vor dem Rebuild `Get-Process TerranigmaSNESRecomp | Stop-Process`. EXE: `build\Release\TerranigmaSNESRecomp.exe`. Der Launcher wartet auf **Play**.
+- Kein eigenes `build-debugtools`: Debug-Config nutzen. Debug-Werkzeuge des Frameworks: TCP-Debug-Server (`snesrecomp/tools/sneslib`, Port 4377), Lua (`-DSNESRECOMP_ENABLE_LUA=ON`, `SNESRECOMP_LUA_PORT`), Trace-Env-Variablen (`SNESRECOMP_WRAM_TRACE_FILE` usw.), `snesref` / `snes_cosim.py` als Referenzvergleich. Ob der Debug-Server im Terranigma-Build aktiv ist, noch nicht geprüft.
+- Nach Verschieben des Projektordners `build/` löschen (feste Pfade im CMake-Cache).
+
+**Region/PAL:** Die DE-Fassung ist PAL und zeigt sonst "This game pak is not designed for your Super Famicom or Super NES". Lokaler Patch im Submodul `snesrecomp`: `g_snes_ppu_report_pal` (`runner/src/snes/ppu.c/.h`, `$213F` Bit 4), gesetzt in `GameInitialize()` in `src/game_rtl.c`. Der Patch liegt NUR im Working Tree des Submoduls (nicht committet, kein Fork). Takt bleibt NTSC 60 Hz, das Framework hat keinen PAL-Timing-Modus.
+
+**Stand (2026-11-26):** Spiel bootet und ist spielbar (Nutzer bestätigt). Debug-Build läuft. **16:9 in Arbeit:** Mod-Paket `terranigma.widescreen` (`mods/preloaded/packages/`, Plugin `src/terranigma_widescreen.c`, 398x224 PPU-Frame, Option `edge_policy`, Env-Override `TERRA_WS`), Menü mit `clamp` bestätigt; Spielwelt (Welt, Kartenrand, Räume, NPCs außerhalb 4:3) mit `TERRA_WS=natural` bestätigt, BG3-Randstreifen offen (Details `docs/memory/terranigma-widescreen-status.md`). Doku: `docs/TERRANIGMA_WIDESCREEN_HANDOFF.md`. Debug-Server (Port 4377) nur mit `-DSNESRECOMP_ENABLE_TRACE=ON` im Build. Zweiter lokaler Submodul-Patch: `ppu_read` ohne `assert` im Default. Kein GitHub-Repo, noch nicht als Submodul in `.gitmodules` eingetragen.
+
+---
+
+## Illusion of Time / SNES (`illusionoftime-recomp`)
+
+Angelegt 2026-11-26 mit `snesrecomp/tools/new_project/setup_project.ps1` (1 Spieler, kein Netplay/GitHub). Gleiche Toolchain und Build wie Terranigma. ROM: `C:\Users\BeneX Drake\Desktop\Development\Illusion of Time (Germany) (Rev 1).sfc` (per `rom.cfg`). Exe: `build\Debug\IllusionOfTimeSNESRecomp.exe`. PAL-Patch wie bei Terranigma: `patches/snesrecomp-pal.patch` (per `bash tools/apply_framework_patches.sh`, noch nicht in CMake eingebunden), `GameInitialize()` in `src/game_rtl.c` setzt `g_snes_ppu_report_pal`. Stand (2026-11-26): Boot bestaetigt (Intro, Titel, Menue, Schule, Feld laufen). **16:9 Grundgeruest:** Mod-Paket `illusionoftime.widescreen` (`mods/preloaded/packages/`, Plugin `src/illusionoftime_widescreen.c`, 398x224, Option `edge_policy` = clamp/mirror/repeat, Env `IOT_WS`), Aufruf in `GameDrawPpuFrame`, Breite in `main.c`. Feldszenen: Randspalten aus dem Spiel-Builder `$C2:B6A6` (offline per Snapshot, Details `docs/memory/illusionoftime-widescreen-status.md`) + Objekt-Cull-Hooks; sonst `clamp`. Patch `patches/snesrecomp-pal.patch` enthaelt auch den `cart_readHirom`-Assert-Fix. Debug-Build mit `-DSNESRECOMP_ENABLE_TRACE=ON`, Debug-Server Port 4377 (Start per ROM-Argument ueberspringt den Launcher).
 
 ---
 
