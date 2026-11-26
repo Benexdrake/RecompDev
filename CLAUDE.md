@@ -151,6 +151,9 @@ Feature `pillarbox` (`mods/alundra_pillarbox.c`): Raumliste, in gelisteten Szene
 ### Release 0.2.0 (2026-11-24)
 USA-Fassung (SLUS-00553) als Windows-ZIP, Draft auf GitHub, Nutzer-getestet. Befehl, Stolpersteine und Identitaetsdateien: `docs/memory/alundra-release-0-2-0.md`. Der Arbeitsstand in `alundra-recomp` ist inzwischen US, nicht DE (`*.de_main` sind die DE-Kopien).
 
+### Kamera-Begrenzung (fertig, bestätigt, 2026-11-26)
+Feature `camera_clamp` (`mods/alundra_camclamp.c`, Hook 0x8002D1B8, Wort 0x3C04801F): Kamera X wird in 16:9 um den Seitenrand enger geklemmt, keine Sicht über den Kartenrand, in allen Räumen (Fallback 52 Spalten). Randverlauf entfällt in Dorf/Wald. Details `docs/memory/alundra-kamera-begrenzung.md`. Nur Debug gebaut.
+
 ### Offene Idee
 `docs/alundra-dialogbox-plan.md`: Sprechboxen durch eigene Grafik und TTF-Text ersetzen (nur Plan, nichts implementiert).
 

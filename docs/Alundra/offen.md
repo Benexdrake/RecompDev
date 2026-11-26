@@ -1,1 +1,0 @@
-Speicherraum - Farben im Hintergrund und die Wolke anpassen

@@ -38,3 +38,4 @@
 - [Alundra Gilder-Cheat](alundra-cheat-gilder.md) — Gilder-Adresse, Feature cheat_infinite_money
 - [Terranigma Widescreen](terranigma-widescreen-status.md) — Welt/Räume/Objekte 16:9 bestätigt (2026-11-26): Weltkarte aus WRAM per Provider, Cull-Hooks, BG3-Streifen offen
 - [Illusion of Time Widescreen](illusionoftime-widescreen-status.md) — 16:9 Grundgeruest laeuft (clamp), Welt/Culling offen
+- [Alundra Kamera-Begrenzung](alundra-kamera-begrenzung.md) — Feature camera_clamp, Hook 0x8002D1B8, Kamera stoppt am Kartenrand (2026-11-26), Build-Fallen
